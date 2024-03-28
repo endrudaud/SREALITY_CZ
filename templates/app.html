@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>APARTMENT LIST IN PRAGUE</title>
+    <title>Sreality List Apartments</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Apartment List in Prague</h1>
+    <table>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td><img src="{{ row[2] }}" alt="Image" style="width: 100px; height: auto;"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

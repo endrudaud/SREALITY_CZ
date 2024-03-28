@@ -1,0 +1,10 @@
+# Use the official PostgreSQL image as the base image
+FROM postgres:latest
+
+# Set environment variables for PostgreSQL
+ENV POSTGRES_USER docker
+ENV POSTGRES_PASSWORD docker
+ENV POSTGRES_DB docker
+
+# Copy the SQL script to create the schema and table
+COPY init.sql /docker-entrypoint-initdb.d/
